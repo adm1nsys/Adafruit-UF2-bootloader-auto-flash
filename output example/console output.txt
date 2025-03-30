@@ -1,0 +1,120 @@
+adminpro@Admins-MacBook-Pro nicenano_iot_test % pio run -t clean                                                                                                                           
+pio run
+Processing adafruit_feather_nrf52840 (platform: nordicnrf52; board: adafruit_feather_nrf52840; framework: arduino)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+Removing .pio/build/adafruit_feather_nrf52840
+Done cleaning
+=============================================================================================== [SUCCESS] Took 0.55 seconds ===============================================================================================
+Processing adafruit_feather_nrf52840 (platform: nordicnrf52; board: adafruit_feather_nrf52840; framework: arduino)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/nordicnrf52/adafruit_feather_nrf52840.html
+PLATFORM: Nordic nRF52 (10.8.0) > Adafruit Feather nRF52840 Express
+HARDWARE: NRF52840 64MHz, 243KB RAM, 796KB Flash
+DEBUG: Current (blackmagic) External (blackmagic, cmsis-dap, jlink, stlink)
+PACKAGES: 
+ - framework-arduinoadafruitnrf52 @ 1.10601.0 (1.6.1) 
+ - framework-cmsis @ 2.50700.210515 (5.7.0) 
+ - tool-adafruit-nrfutil @ 1.503.0 (5.3) 
+ - tool-sreccat @ 1.164.0 (1.64) 
+ - toolchain-gccarmnoneeabi @ 1.70201.0 (7.2.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 14 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in release mode
+Compiling .pio/build/adafruit_feather_nrf52840/src/main.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduinoVariant/variant.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/HardwarePWM.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/RingBuffer.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/Tone.cpp.o
+Archiving .pio/build/adafruit_feather_nrf52840/libFrameworkArduinoVariant.a
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/Uart.cpp.o
+Indexing .pio/build/adafruit_feather_nrf52840/libFrameworkArduinoVariant.a
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/WInterrupts.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/abi.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/avr/dtostrf.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/delay.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/croutine.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/event_groups.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/list.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/portable/MemMang/heap_3.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/queue.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/stream_buffer.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/tasks.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/Source/timers.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/portable/CMSIS/nrf52/port_cmsis_systick.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/freertos/portable/GCC/nrf52/port.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/hooks.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/itoa.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/linker/gcc_startup_nrf52.S.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/linker/gcc_startup_nrf52840.S.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/main.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/new.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_gpiote.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_power.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_pwm.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_qspi.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spim.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_spis.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_temp.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/drivers/src/nrfx_timer.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/mdk/system_nrf52.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/nordic/nrfx/mdk/system_nrf52840.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/pulse.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/pulse_asm.S.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/rtos.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/sysview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/sysview/SEGGER/SEGGER_RTT.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/sysview/SEGGER/SEGGER_RTT_printf.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/sysview/SEGGER/SEGGER_SYSVIEW.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/sysview/SEGGER_SYSVIEW_FreeRTOS.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/utility/AdaCallback.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/utility/SoftwareTimer.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/utility/adafruit_fifo.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/utility/debug.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/utility/utilities.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/wiring.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/wiring_analog.cpp.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/wiring_analog_nRF52.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/wiring_digital.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/wiring_private.c.o
+Compiling .pio/build/adafruit_feather_nrf52840/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/adafruit_feather_nrf52840/libFrameworkArduino.a
+Indexing .pio/build/adafruit_feather_nrf52840/libFrameworkArduino.a
+Linking .pio/build/adafruit_feather_nrf52840/firmware.elf
+Building .pio/build/adafruit_feather_nrf52840/firmware.hex
+Checking size .pio/build/adafruit_feather_nrf52840/firmware.elf
+Building .pio/build/adafruit_feather_nrf52840/firmware.zip
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [          ]   1.2% (used 3084 bytes from 248832 bytes)
+Flash: [          ]   2.6% (used 21132 bytes from 815104 bytes)
+Zip created at .pio/build/adafruit_feather_nrf52840/firmware.zip
+after_build(["buildprog"], [".pio/build/adafruit_feather_nrf52840/firmware.zip"])
+=== Creating DFU package ===
+Running: "/Users/adminpro/Library/Python/3.13/bin/adafruit-nrfutil" dfu genpkg --dev-type 0x0052 --application "/Users/adminpro/Documents/PlatformIO/Projects/nicenano_iot_test/.pio/build/adafruit_feather_nrf52840/firmware.hex" "/Users/adminpro/Documents/PlatformIO/Projects/nicenano_iot_test/.pio/build/adafruit_feather_nrf52840/firmware_dfu.zip"
+Zip created at /Users/adminpro/Documents/PlatformIO/Projects/nicenano_iot_test/.pio/build/adafruit_feather_nrf52840/firmware_dfu.zip
+=== DFU Upload ===
+1) /dev/cu.BLTH - n/a
+2) /dev/cu.Bluetooth-Incoming-Port - n/a
+3) /dev/cu.URT1 - n/a
+4) /dev/cu.URT2 - n/a
+5) /dev/cu.usbmodem141101 - nice!nano
+5
+Enter the number of the port to flash: 🚀 Flashing to port /dev/cu.usbmodem141101 ...
+Upgrading target on /dev/cu.usbmodem141101 with DFU package /Users/adminpro/Documents/PlatformIO/Projects/nicenano_iot_test/.pio/build/adafruit_feather_nrf52840/firmware_dfu.zip. Flow control is disabled, Dual bank, Touch disabled
+########################################
+##
+Activating new firmware
+Device programmed.
+============================================================================================== [SUCCESS] Took 36.01 seconds ==============================================================================================
+adminpro@Admins-MacBook-Pro nicenano_iot_test % 
