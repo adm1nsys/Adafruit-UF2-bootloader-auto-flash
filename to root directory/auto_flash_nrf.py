@@ -13,7 +13,7 @@ def after_build(source, target, env):
     hex_file = os.path.join(build_dir, "firmware.hex")
     dfu_zip = os.path.join(build_dir, "firmware_dfu.zip")
 
-    # Use pip-installed adafruit-nrfutil
+    # Use pip-installed adafruit-nrfutil and edit the patch to your python version
     nrfutil = os.path.expanduser("~/Library/Python/3.13/bin/adafruit-nrfutil")
 
     if not os.path.exists(nrfutil):
