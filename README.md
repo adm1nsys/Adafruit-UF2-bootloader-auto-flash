@@ -1,6 +1,14 @@
-# Adafruit UF2 bootloader auto-flash
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset=".github/readme/banner-light.svg">
+  <img src=".github/readme/banner-dark.svg" alt="UF2 Auto Flash — Build, package and flash nRF52840 boards over plain USB" width="100%">
+</picture>
 
-**[Website](https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/)** · **[Download `auto_flash_nrf.py`](https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/#versions)** · MIT license
+<p>
+  <a href="https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/"><img src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white" alt="Website"></a>
+  <a href="https://github.com/adm1nsys/Adafruit-UF2-bootloader-auto-flash/releases/latest/download/auto_flash_nrf.py"><img src="https://img.shields.io/badge/Download-070707?style=for-the-badge&logo=python&logoColor=white" alt="Download auto_flash_nrf.py"></a>
+  <a href="https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/#versions"><img src="https://img.shields.io/badge/All_versions-070707?style=for-the-badge&logo=github&logoColor=white" alt="All versions"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-070707?style=for-the-badge&labelColor=070707&color=434343" alt="MIT license"></a>
+</p>
 
 A PlatformIO post-build script for nRF52840 boards with the [Adafruit UF2 bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader), such as the [nice!nano](https://nicekeyboards.com/docs/nice-nano). After every build it packages `firmware.hex` as a DFU zip, lists the serial ports with their descriptions and flashes the one you pick — over plain USB, no J-Link or SWD.
 
