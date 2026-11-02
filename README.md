@@ -1,5 +1,7 @@
 # Adafruit UF2 bootloader auto-flash
 
+**[Website](https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/)** · **[Download `auto_flash_nrf.py`](https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/#versions)** · MIT license
+
 A PlatformIO post-build script for nRF52840 boards with the [Adafruit UF2 bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader), such as the [nice!nano](https://nicekeyboards.com/docs/nice-nano). After every build it packages `firmware.hex` as a DFU zip, lists the serial ports with their descriptions and flashes the one you pick — over plain USB, no J-Link or SWD.
 
 ```

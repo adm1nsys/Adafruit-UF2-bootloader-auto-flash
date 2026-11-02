@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>UF2 Auto Flash — adm1nsys</title>
+    <meta name="description" content="PlatformIO post-build script: package and flash nRF52840 boards with the Adafruit UF2 bootloader (nice!nano) over USB.">
+    <meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/adm1nsys/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/adm1nsys/assets/css/style.css">
+    <link rel="stylesheet" href="/adm1nsys/kit/project.css">
+  </head>
+  <body>
+    <div class="backdrop backdrop-short" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <header class="page-head">
+        <p class="eyebrow">PlatformIO · nRF52840 · Python</p>
+        <h1>UF2 Auto Flash</h1>
+        <p class="lead" data-i18n="lead"></p>
+        <div class="actions">
+          <a class="btn btn-primary" data-download="auto_flash_nrf.py"
+             href="https://github.com/adm1nsys/Adafruit-UF2-bootloader-auto-flash/raw/main/auto_flash_nrf.py">
+            <span data-i18n="download"></span>
+          </a>
+          <a class="btn" href="#versions" data-i18n="allVersions"></a>
+          <a class="btn btn-ghost" href="https://github.com/adm1nsys/Adafruit-UF2-bootloader-auto-flash" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <p class="meta" data-i18n="meta"></p>
+      </header>
+
+      <div class="card terminal" aria-label="Example output">
+        <div class="terminal-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre>$ pio run
+…
+=== Creating DFU package ===
+Zip created at .pio/build/adafruit_feather_nrf52840/firmware_dfu.zip
+=== DFU Upload ===
+1) /dev/cu.Bluetooth-Incoming-Port - n/a
+2) /dev/cu.usbmodem141101 - nice!nano  &lt;- probably your board
+Enter the number of the port to flash (Enter to skip): 2
+🚀 Flashing to port /dev/cu.usbmodem141101 ...
+Activating new firmware
+Device programmed.</pre>
+      </div>
+
+      <div class="folds">
+        <details class="card fold" open>
+          <summary><span data-i18n="setupTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <ol>
+              <li data-i18n-html="step1"></li>
+              <li data-i18n-html="step2"></li>
+            </ol>
+<pre>[env:adafruit_feather_nrf52840]
+platform = nordicnrf52
+board = adafruit_feather_nrf52840
+framework = arduino
+build_flags =
+  -DARDUINO_NICE_NANO
+  -DNRF52840_XXAA
+  -Wl,--section-start=.text=0x26000
+extra_scripts =
+  post:auto_flash_nrf.py</pre>
+            <ol start="3">
+              <li data-i18n-html="step3"></li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="nrfutilTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="nrfutilBody"></div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="addressTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <p data-i18n-html="addressBody"></p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th data-i18n="thSoftDevice"></th><th data-i18n="thStart"></th></tr></thead>
+                <tbody>
+                  <tr><td data-i18n="s140v6"></td><td><code>0x26000</code></td></tr>
+                  <tr><td>S140 7.x</td><td><code>0x27000</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-i18n-html="addressNote"></p>
+          </div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="filesTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="filesBody"></div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="testedTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="testedBody"></div>
+        </details>
+
+        <details class="card fold" id="versions" open>
+          <summary><span data-i18n="versionsTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-releases></div>
+        </details>
+      </div>
+    </main>
+
+    <script>
+      const REPO = 'https://github.com/adm1nsys/Adafruit-UF2-bootloader-auto-flash';
+      const file = (path) => `<a href="${REPO}/blob/main/${path}" target="_blank" rel="noopener"><code>${path}</code></a>`;
+      window.PROJECT = {
+        repo: 'adm1nsys/Adafruit-UF2-bootloader-auto-flash',
+        license: 'MIT',
+        langs: ['de', 'en'],
+        fallback: [{ label: 'auto_flash_nrf.py (main)', url: `${REPO}/raw/main/auto_flash_nrf.py` }],
+        i18n: {
+          de: {
+            lead: 'Ein PlatformIO-Skript für nRF52840-Boards mit Adafruit-UF2-Bootloader wie den nice!nano. Nach jedem Build verpackt es die Firmware als DFU-Archiv, zeigt die seriellen Ports an und flasht den gewählten — über normales USB, ohne J-Link oder SWD.',
+            download: 'auto_flash_nrf.py herunterladen',
+            allVersions: 'Alle Versionen',
+            meta: 'macOS, Linux, Windows · keine zusätzliche Installation',
+            setupTitle: 'Einrichtung in drei Schritten',
+            step1: '<code>auto_flash_nrf.py</code> neben die <code>platformio.ini</code> des Projekts legen.',
+            step2: 'Das Skript in der Umgebung eintragen:',
+            step3: 'Zweimal Reset drücken, damit das Board im Bootloader ist, und <code>pio run</code> starten. Am Port-Prompt mit Enter überspringen, wenn nur gebaut werden soll.',
+            nrfutilTitle: 'Woher adafruit-nrfutil kommt',
+            nrfutilBody: '<p>Nichts manuell zu installieren: Die Plattform <code>nordicnrf52</code> bringt <code>adafruit-nrfutil</code> schon mit, und das Skript nutzt diese Kopie mit dem Python von PlatformIO.</p><p>Ohne sie sucht es der Reihe nach:</p><ol><li>die Umgebungsvariable <code>NRFUTIL</code>,</li><li><code>adafruit-nrfutil</code> im <code>PATH</code>,</li><li><code>pip3 install --user</code>-Installationen jeder Python-Version.</li></ol><p>Eine andere Kopie: <code>export NRFUTIL=/pfad/zu/adafruit-nrfutil</code>.</p>',
+            addressTitle: 'Die Startadresse 0x26000',
+            addressBody: 'Die Anwendung muss im Flash direkt hinter dem SoftDevice (Nordics Bluetooth-Stack) des Bootloaders beginnen. Welches SoftDevice das Board hat, steht in <code>INFO_UF2.TXT</code> auf dem USB-Laufwerk, das im Bootloader-Modus erscheint.',
+            thSoftDevice: 'SoftDevice in INFO_UF2.TXT',
+            thStart: 'Start der Anwendung',
+            s140v6: 'S140 6.x (nice!nano, Adafruit Feather nRF52840)',
+            addressNote: 'Der Wert gehört in <code>-Wl,--section-start=.text=…</code>. Mit einer falschen Adresse wird problemlos geflasht, aber die Firmware startet nicht.',
+            filesTitle: 'Dateien im Repository',
+            filesBody: `<ul><li>${file('auto_flash_nrf.py')} — das Skript</li><li>${file('examples/platformio.ini')} — funktionierende Konfiguration für den nice!nano</li><li>${file('examples/run.sh')} — sauberer Neubau</li><li>${file('examples/console-output.txt')} — vollständiges Log von Build und Flash</li><li>${file('examples/nice-nano-bootloader/INFO_UF2.TXT')} — vom Bootloader-Laufwerk meines nice!nano</li></ul>`,
+            testedTitle: 'Getestet',
+            testedBody: '<p>Im Einsatz auf einem nice!nano (UF2-Bootloader 0.6.0, S140 6.1.1) unter macOS. Die aktuelle Fassung, die <code>adafruit-nrfutil</code> selbst findet, ist bis zur Port-Auswahl getestet (Paket erstellt, Ports angezeigt), aber noch nicht auf ein Board geflasht.</p><p>Die Portliste kommt von pyserial, daher erscheinen auch Linux- (<code>/dev/ttyACM*</code>) und Windows-Ports (<code>COM*</code>).</p>',
+            versionsTitle: 'Versionen'
+          },
+          en: {
+            lead: 'A PlatformIO script for nRF52840 boards with the Adafruit UF2 bootloader, such as the nice!nano. After every build it packages the firmware as a DFU archive, lists the serial ports and flashes the one you pick — over plain USB, no J-Link or SWD.',
+            download: 'Download auto_flash_nrf.py',
+            allVersions: 'All versions',
+            meta: 'macOS, Linux, Windows · nothing extra to install',
+            setupTitle: 'Setup in three steps',
+            step1: 'Put <code>auto_flash_nrf.py</code> next to your project’s <code>platformio.ini</code>.',
+            step2: 'Add it to the environment:',
+            step3: 'Double-tap reset so the board is in the bootloader, then run <code>pio run</code>. Press Enter at the port prompt to build without flashing.',
+            nrfutilTitle: 'Where adafruit-nrfutil comes from',
+            nrfutilBody: '<p>Nothing to install by hand: the <code>nordicnrf52</code> platform already ships <code>adafruit-nrfutil</code>, and the script runs that copy with PlatformIO’s own Python.</p><p>Without it, the script looks for:</p><ol><li>the <code>NRFUTIL</code> environment variable,</li><li><code>adafruit-nrfutil</code> in <code>PATH</code>,</li><li><code>pip3 install --user</code> installs of any Python version.</li></ol><p>Another copy: <code>export NRFUTIL=/path/to/adafruit-nrfutil</code>.</p>',
+            addressTitle: 'The start address 0x26000',
+            addressBody: 'The application has to start right after the bootloader’s SoftDevice (Nordic’s Bluetooth stack) in flash. Which SoftDevice your board has is written in <code>INFO_UF2.TXT</code> on the USB drive that appears in bootloader mode.',
+            thSoftDevice: 'SoftDevice in INFO_UF2.TXT',
+            thStart: 'Application start',
+            s140v6: 'S140 6.x (nice!nano, Adafruit Feather nRF52840)',
+            addressNote: 'Set it in <code>-Wl,--section-start=.text=…</code>. A wrong address flashes fine, but the firmware does not start.',
+            filesTitle: 'Files in the repository',
+            filesBody: `<ul><li>${file('auto_flash_nrf.py')} — the script</li><li>${file('examples/platformio.ini')} — working configuration for a nice!nano</li><li>${file('examples/run.sh')} — clean rebuild</li><li>${file('examples/console-output.txt')} — a full build-and-flash log</li><li>${file('examples/nice-nano-bootloader/INFO_UF2.TXT')} — from my nice!nano’s bootloader drive</li></ul>`,
+            testedTitle: 'Tested on',
+            testedBody: '<p>Used on a nice!nano (UF2 bootloader 0.6.0, S140 6.1.1) with macOS. The current version, which finds <code>adafruit-nrfutil</code> by itself, is tested up to the port prompt (package created, ports listed) but not yet flashed to a board.</p><p>The port list comes from pyserial, so Linux (<code>/dev/ttyACM*</code>) and Windows (<code>COM*</code>) ports show up too.</p>',
+            versionsTitle: 'Versions'
+          }
+        }
+      };
+    </script>
+    <script src="/adm1nsys/kit/project.js"></script>
+  </body>
+</html>
